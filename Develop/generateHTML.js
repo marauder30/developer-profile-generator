@@ -37,7 +37,7 @@ module.exports = function generateHTML(answers) {
           <meta http-equiv="X-UA-Compatible" content="ie=edge" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
           <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
           <title>Document</title>
           <style>
               @page {
@@ -196,7 +196,7 @@ module.exports = function generateHTML(answers) {
 
 
       <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Public Repositories</h5>
@@ -204,7 +204,7 @@ module.exports = function generateHTML(answers) {
                   </div>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Followers</h5>
@@ -214,7 +214,7 @@ module.exports = function generateHTML(answers) {
           </div>
       </div>
       <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">GitHub Stars</h5>
@@ -222,7 +222,7 @@ module.exports = function generateHTML(answers) {
                   </div>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Following</h5>
