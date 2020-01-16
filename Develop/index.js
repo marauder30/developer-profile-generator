@@ -27,9 +27,9 @@ function promptUser() {
 }
 
 
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
  
-}
+// }
 
 async function init() {
 

@@ -37,6 +37,7 @@ module.exports = function generateHTML(answers) {
           <meta http-equiv="X-UA-Compatible" content="ie=edge" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
           <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
           <title>Document</title>
           <style>
               @page {
@@ -176,6 +177,27 @@ module.exports = function generateHTML(answers) {
           </style>
       </head>
       <body>
+
+      <div class="photo-header">
+      <img src="https://placekitten.com/300/300/"></img>
+
+      <h1>Hi!</h1>
+      <h2>My name is xxxxxxx </h2>
+      <p> Currently @ xxxxxxxx </p>
+      </div>
+
+      <span> xxxxxx location xxxx github link xxxxxx personal link </span>
+
+      <h3> xxxxxxxxx from github response: about me xxxxxxxxxxx <h3>
+
+      <div class="row">
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-body">
+
+
+
+      </div>
         
       </body>
     </html>`
