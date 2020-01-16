@@ -178,49 +178,54 @@ module.exports = function generateHTML(answers) {
       </head>
       <body>
 
+  <div class="container">
+    <div class="wrapper">
       <div class="photo-header">
       <img src="https://placekitten.com/300/300/"></img>
 
       <h1>Hi!</h1>
       <h2>My name is xxxxxxx </h2>
       <p> Currently @ xxxxxxxx </p>
-      </div>
-
       <span> xxxxxx location xxxx github link xxxxxx personal link </span>
-
+      </div>
+    </div>
+  <div>
+      <br>
+      <br>
       <h3> xxxxxxxxx from github response: about me xxxxxxxxxxx <h3>
 
+
       <div class="row">
-          <div class="col-md-5">
-              <div class="card">
+          <div class="col-md-4">
+              <div class="card" style="width: 28rem;">
                   <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Public Repositories</h5>
                     <h6 class="card-subtitle"></h6>
                   </div>
               </div>
           </div>
-          <div class="col-md-5">
-              <div class="card">
+          <div class="col-md-4">
+              <div class="card" style="width: 28rem;">
                   <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Followers</h5>
                     <h6 class="card-subtitle"></h6>
                   </div>
               </div>
           </div>
       </div>
       <div class="row">
-          <div class="col-md-5">
-              <div class="card">
+          <div class="col-md-4">
+              <div class="card" style="width: 28rem;">
                   <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">GitHub Stars</h5>
                     <h6 class="card-subtitle"></h6>
                   </div>
               </div>
           </div>
-          <div class="col-md-5">
-              <div class="card">
+          <div class="col-md-4">
+              <div class="card" style="width: 28rem;">
                   <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Following</h5>
                     <h6 class="card-subtitle"></h6>
                   </div>
               </div>
@@ -228,6 +233,10 @@ module.exports = function generateHTML(answers) {
       </div>
 
 
+
+      <div class="container">
+        <div class="wrapper">
+        </div>
 
       </div>
         
