@@ -40,9 +40,9 @@ async function init() {
 
         username = answers.name;
 
-        generateHTML(data);
+        const html = generateHTML(answers);
 
-        // await writeFileAsync(`${username}.html`, html);
+        await writeFileAsync(`${username}.html`, html);
 
         console.log(`Successfully wrote to ${username}.html!`)
     } catch(err) {
