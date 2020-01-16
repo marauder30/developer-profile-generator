@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateHTML = require("./generateHTML");
+var username;
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -34,7 +36,15 @@ async function init() {
     try {
         const answers = await promptUser();
 
-        console.log(answers);
+        console.log(answers.name);
+
+        username = answers.name;
+
+        generateHTML(data);
+
+        // await writeFileAsync(`${username}.html`, html);
+
+        console.log(`Successfully wrote to ${username}.html!`)
     } catch(err) {
         console.log(err);
     }
