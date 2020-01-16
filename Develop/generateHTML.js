@@ -194,6 +194,38 @@ module.exports = function generateHTML(answers) {
           <div class="col-md-5">
               <div class="card">
                   <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle"></h6>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle"></h6>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle"></h6>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle"></h6>
+                  </div>
+              </div>
+          </div>
+      </div>
 
 
 
