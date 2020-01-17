@@ -193,7 +193,7 @@ function generateHTML(answers) {
         <img src="https://placekitten.com/300/300/"></img>
   
         <h1>Hi!</h1>
-        <h2>My name is  xxxxxxxx  </h2>
+        <h2>My name is  ${realName}  </h2>
         <p> Currently @ xxxxxxxx </p>
         <span> xxxxxx location xxxx github link xxxxxx personal link </span>
         </div>
@@ -289,68 +289,70 @@ async function axiosCall() {
                         realName = response.data.name;
                         console.log(realName);
 
+                        
+                        
 
-            
-
+                        
+                        
                     })
                 }  catch(err) {
-                        console.log(err);
-                    }
-                
+                    console.log(err);
                 }
                 
-// function axiosCall() {
-    
-    //     axios
-    //     .get(`https://api.github.com/users/${username}`)
-    //     .then(function(response) {
-        //         realName = response.data.name;
-        //         console.log(realName);
-        //     })
-        // }
-
-        
-        // function writeToFile(fileName, data) {
+            }
             
-    // }
-    
-    async function init() {
-        
-        try {
-            const answers = await promptUser();
-            
-            username = answers.name;
-            
-            
-            
-            
-            axiosCall();
-            
-            const html = generateHTML(answers);
-            await writeFileAsync(`${username}.html`, html);
-            console.log(`Successfully wrote to ${username}.html!`);
-
-
-            Prince()
-                .inputs(`${username}.html`)
-                .output(`${username}.pdf`)
-                .execute()
-                .then(function () {
-                    console.log("OK: Done")
-                }, function (error) {
-                    console.log("ERROR: ", util.inspect(error))
-                })
-            
-            
-            
-            
-        } catch(err) {
-            console.log(err);
-        }
-        
-    }
-    
-    init();
-    
-    
-    
+            // function axiosCall() {
+                
+                //     axios
+                //     .get(`https://api.github.com/users/${username}`)
+                //     .then(function(response) {
+                    //         realName = response.data.name;
+                    //         console.log(realName);
+                    //     })
+                    // }
+                    
+                    
+                    // function writeToFile(fileName, data) {
+                        
+                        
+                        // }
+                        async function init() {
+                            
+                            try {
+                                const answers = await promptUser();
+                                
+                                username = answers.name;
+                                
+                                
+                                const html = generateHTML(answers);
+                                await writeFileAsync(`${username}.html`, html);
+                                console.log(`Successfully wrote to ${username}.html!`);
+                                
+                                
+                                axiosCall();
+                                
+                                
+                                
+                                Prince()
+                                .inputs(`${username}.html`)
+                                .output(`${username}.pdf`)
+                                .execute()
+                                .then(function () {
+                                    console.log("OK: Done")
+                                }, function (error) {
+                                    console.log("ERROR: ", util.inspect(error))
+                                })
+                                
+                                
+                                
+                                
+                            } catch(err) {
+                                console.log(err);
+                            }
+                            
+                        }
+                        
+                        init();
+                        
+                        
+                        
