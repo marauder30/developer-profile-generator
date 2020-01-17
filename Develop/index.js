@@ -3,7 +3,8 @@ const fs = require("fs");
 const util = require("util");
 const axios = require("axios");
 const generateHTML = require("./generateHTML");
-var username;
+let username;
+
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -27,6 +28,34 @@ function promptUser() {
     ]);
 }
 
+// async function axiosCall(username) {
+
+//     try {
+
+//         axios
+//         .get(`https://api.github.com/users/${username}`)
+//         .then(function(response) {
+//           console.log(response.data);
+//         });
+//     } catch(err) {
+//         console.log(err);
+//     }
+// }
+
+// axiosCall();
+
+
+function callAPI() {
+
+    axios
+    .get(`https://api.github.com/users/${username}`)
+    .then(function(response) {
+        console.log(response.data.location);
+    })
+
+}
+
+
 
 // function writeToFile(fileName, data) {
  
@@ -41,6 +70,10 @@ async function init() {
 
         username = answers.name;
 
+        // axiosCall();
+        callAPI();
+
+
         const html = generateHTML(answers);
 
         await writeFileAsync(`${username}.html`, html);
@@ -53,3 +86,5 @@ async function init() {
 }
 
 init();
+
+
