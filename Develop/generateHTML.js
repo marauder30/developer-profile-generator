@@ -1,4 +1,4 @@
-
+const index = require("./index")
 
 module.exports = colors = {
   green: {
@@ -184,7 +184,7 @@ module.exports = function generateHTML(answers) {
       <img src="https://placekitten.com/300/300/"></img>
 
       <h1>Hi!</h1>
-      <h2>My name is xxxxxxx </h2>
+      <h2>My name is  xxxxxxxx  </h2>
       <p> Currently @ xxxxxxxx </p>
       <span> xxxxxx location xxxx github link xxxxxx personal link </span>
       </div>
