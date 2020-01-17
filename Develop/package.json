@@ -14,8 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.1",
+    "electron-pdf": "^4.0.8",
     "fs": "0.0.1-security",
     "inquirer": "^7.0.3",
+    "prince": "^1.7.0",
     "util": "^0.12.1"
   }
 }

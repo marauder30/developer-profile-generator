@@ -3,6 +3,7 @@ const fs = require("fs");
 const util = require("util");
 const axios = require("axios");
 const generateHTML = require("./generateHTML");
+const Prince = require("prince");
 let username;
 let realName;
 
@@ -85,6 +86,17 @@ async function axiosCall() {
             const html = generateHTML(answers);
             await writeFileAsync(`${username}.html`, html);
             console.log(`Successfully wrote to ${username}.html!`);
+
+
+            Prince()
+                .inputs(`${username}.html`)
+                .output(`${username}.pdf`)
+                .execute()
+                .then(function () {
+                    console.log("OK: Done")
+                }, function (error) {
+                    console.log("ERROR: ", util.inspect(error))
+                })
             
             
             
