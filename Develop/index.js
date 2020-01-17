@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const axios = require("axios");
 const generateHTML = require("./generateHTML");
 var username;
 
