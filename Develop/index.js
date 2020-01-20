@@ -8,9 +8,6 @@ let username = [];
 let color;
 let realName;
 
-// module.exports = myData = [realName, company, location, github, blog, bio, publicRepos, followers, following];
-
-
 
 
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -115,8 +112,6 @@ async function init() {
                                 let userStars = await starsCall();
                                 const starsArray = [];
 
-
-                                console.log(userStars[2].stargazers_count);
 
                                 for (repo of userStars) {
 
