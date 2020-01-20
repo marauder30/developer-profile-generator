@@ -6,8 +6,13 @@ This application will serve as a template engine that takes in a user's GitHub u
 
 ## Screenshots
 
+We begin with a few simple prompts from a command line interface
 ![](Assets/profile1.png)
+
+The application takes your GitHub username and renders a new file from an HTML template, pulling information from the GitHub API response
 ![](Assets/profile2.png)
+
+The HTML file is instantly converted into a PDF file, which is easier to save and share!
 ![](Assets/profile3.png)
 
 ## Technology
