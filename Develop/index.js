@@ -21,12 +21,12 @@ function promptUser() {
             {
                 type: "input",
                 name: "name",
-                message: "WOT is your (github user)name?"
+                message: "What is your GitHub username?"
             },
             {
                 type: "list",
                 name: "color",
-            message: "WOT is your favourite colour?",
+            message: "What color would you prefer?",
             choices: ["green", "blue", "pink", "red"]
         }
     ]);
@@ -109,7 +109,7 @@ async function init() {
 
                                 let userData = await axiosCall();
 
-                                console.log(userData.name);
+                                console.log(userData);
 
 
                                 let userStars = await starsCall();

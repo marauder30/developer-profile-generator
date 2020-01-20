@@ -65,7 +65,7 @@ module.exports = function generateHTML(answers, userData) {
             -webkit-print-color-adjust: exact !important;
             font-family: 'Cabin', sans-serif;
             }
-            main {
+            .main {
             background-color: #E9EDEE;
             height: auto;
             padding-top: 30px;
@@ -82,18 +82,20 @@ module.exports = function generateHTML(answers, userData) {
             }
             h3 {
             font-size: 2em;
+            text-align: center;
             }
             h4 {
-            font-size: 1.5em;
+            font-size: 1.0em;
             }
             h5 {
-            font-size: 1.3em;
+            font-size: 1.0em;
             }
             h6 {
             font-size: 1.2em;
             }
             .photo-header {
             position: relative;
+            text-align: center;
             margin: 0 auto;
             margin-bottom: -50px;
             display: flex;
@@ -178,22 +180,24 @@ module.exports = function generateHTML(answers, userData) {
           </style>
       </head>
       <body>
-
+<div class="main">
   <div class="container">
     <div class="wrapper">
       <div class="photo-header">
-      <img src="https://placekitten.com/300/300/"></img>
+      <img src=${userData.avatar_url}></img>
 
       <h1>Hi!</h1>
-      <h2>My name is ${userData.name}  </h2>
-      <p> Currently @ xxxxxxxx </p>
-      <span> xxxxxx location xxxx github link xxxxxx personal link </span>
+      <h2>My name is ${userData.name}!  </h2>
+      <h4> Currently @ ${userData.company} </h4>
+      <br><br>
+      <br><br>
+      <h6> ${userData.location} github link xxxxxx personal link <h5>
       </div>
     </div>
   <div>
       <br>
       <br>
-      <h3> xxxxxxxxx from github response: about me xxxxxxxxxxx <h3>
+      <h3> ${userData.bio} <h3>
 
 
       <div class="row">
@@ -201,7 +205,7 @@ module.exports = function generateHTML(answers, userData) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Public Repositories</h5>
-                    <h6 class="card-subtitle"></h6>
+                    <h6 class="card-subtitle">${userData.public_repos}</h6>
                   </div>
               </div>
           </div>
@@ -240,7 +244,7 @@ module.exports = function generateHTML(answers, userData) {
         </div>
 
       </div>
-        
+</div>       
       </body>
     </html>`
 }
