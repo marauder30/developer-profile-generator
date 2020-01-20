@@ -188,10 +188,8 @@ module.exports = function generateHTML(answers, userData) {
 
       <h1>Hi!</h1>
       <h2>My name is ${userData.name}!  </h2>
-      <h4> Currently @ ${userData.company} </h4>
-      <br><br>
-      <br><br>
-      <h6> ${userData.location} github link xxxxxx personal link <h5>
+      <h4>Currently @ ${userData.company}</h4>
+      <h6>Location: ${userData.location} | <a href=${userData.html_url}>My GitHub: ${userData.html_url}</a> | <a href=${userData.blog}>My Portfolio</a><h5>
       </div>
     </div>
   <div>
@@ -213,7 +211,7 @@ module.exports = function generateHTML(answers, userData) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Followers</h5>
-                    <h6 class="card-subtitle"></h6>
+                    <h6 class="card-subtitle">${userData.followers}</h6>
                   </div>
               </div>
           </div>
@@ -231,7 +229,7 @@ module.exports = function generateHTML(answers, userData) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Following</h5>
-                    <h6 class="card-subtitle"></h6>
+                    <h6 class="card-subtitle">${userData.following}</h6>
                   </div>
               </div>
           </div>
