@@ -113,17 +113,26 @@ async function init() {
 
 
                                 let userStars = await starsCall();
+                                const starsArray = [];
 
-                                // axiosCall();
 
                                 console.log(userStars[2].stargazers_count);
+
+                                for (repo of userStars) {
+
+                                  starsArray.push(repo.stargazers_count);
+                                }
+
+                                console.log(starsArray);
+                                let result = starsArray.reduce((sum, current) => sum + current, 0);
+                                console.log(result);
 
 
                                 // forEach loop to pull stargazers_count from each
                                 // array and tally the collected numbers
                                 
 
-                                const html = generateHTML(answers, userData);
+                                const html = generateHTML(answers, userData, result);
                                 await writeFileAsync(`${username}.html`, html);
                                 console.log(`Successfully wrote to ${username}.html!`);
                                 
