@@ -17,6 +17,7 @@
     "electron-pdf": "^4.0.8",
     "fs": "0.0.1-security",
     "inquirer": "^7.0.3",
+    "path": "^0.12.7",
     "prince": "^1.7.0",
     "util": "^0.12.1"
   }
