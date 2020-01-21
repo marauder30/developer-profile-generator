@@ -1,36 +1,4 @@
-const index = require("./index")
-
-module.exports = colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-}
-
-
-module.exports = function generateHTML(answers, userData, result) {
-
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
       <head>
           <meta charset="UTF-8" />
@@ -57,7 +25,7 @@ module.exports = function generateHTML(answers, userData, result) {
             height: 100%;
             }
             .wrapper {
-            background-color: ${colors[answers.color].wrapperBackground};
+            background-color: #879CDF;
             padding-top: 100px;
             width: 100%;
             }
@@ -102,8 +70,8 @@ module.exports = function generateHTML(answers, userData, result) {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            background-color: ${colors[answers.color].headerBackground};
-            color: ${colors[answers.color].headerColor};
+            background-color: #FF8374;
+            color: white;
             padding: 10px;
             width: 95%;
             border-radius: 6px;
@@ -157,8 +125,8 @@ module.exports = function generateHTML(answers, userData, result) {
             .card {
               padding: 20px;
               border-radius: 6px;
-              background-color: ${colors[answers.color].headerBackground};
-              color: ${colors[answers.color].headerColor};
+              background-color: #FF8374;
+              color: white;
               margin: 20px;
             }
             
@@ -185,18 +153,18 @@ module.exports = function generateHTML(answers, userData, result) {
   <div class="container">
     <div class="wrapper">
       <div class="photo-header">
-      <img src=${userData.avatar_url}></img>
+      <img src=https://avatars2.githubusercontent.com/u/57773257?v=4></img>
 
       <h1>Hi!</h1>
-      <h2>My name is ${userData.name}!  </h2>
-      <h4>Currently @ ${userData.company}</h4>
-      <h6><a href="https://www.google.com/maps/place/${userData.location}">Location: ${userData.location}</a> | <a href=${userData.html_url}>My GitHub: ${userData.html_url}</a> | <a href=${userData.blog}>My Portfolio</a><h5>
+      <h2>My name is Nick Koch!  </h2>
+      <h4>Currently @ University of Denver</h4>
+      <h6><a href="https://www.google.com/maps/place/Denver, CO">Location: Denver, CO</a> | <a href=https://github.com/marauder30>My GitHub: https://github.com/marauder30</a> | <a href=https://marauder30.github.io/portfolio.html>My Portfolio</a><h5>
       </div>
     </div>
   <div>
       <br>
       <br>
-      <h3> ${userData.bio} <h3>
+      <h3> Junior Back End Web Developer <h3>
 
 
       <div class="row justify-content-around">
@@ -204,7 +172,7 @@ module.exports = function generateHTML(answers, userData, result) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Public Repositories</h5>
-                    <h6 class="card-subtitle">${userData.public_repos}</h6>
+                    <h6 class="card-subtitle">21</h6>
                   </div>
               </div>
           </div>
@@ -212,7 +180,7 @@ module.exports = function generateHTML(answers, userData, result) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Followers</h5>
-                    <h6 class="card-subtitle">${userData.followers}</h6>
+                    <h6 class="card-subtitle">3</h6>
                   </div>
               </div>
           </div>
@@ -222,7 +190,7 @@ module.exports = function generateHTML(answers, userData, result) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">GitHub Stars</h5>
-                    <h6 class="card-subtitle">${result}</h6>
+                    <h6 class="card-subtitle">3</h6>
                   </div>
               </div>
           </div>
@@ -230,7 +198,7 @@ module.exports = function generateHTML(answers, userData, result) {
               <div class="card" style="width: 28rem;">
                   <div class="card-body">
                     <h5 class="card-title">Following</h5>
-                    <h6 class="card-subtitle">${userData.following}</h6>
+                    <h6 class="card-subtitle">9</h6>
                   </div>
               </div>
           </div>
@@ -245,7 +213,4 @@ module.exports = function generateHTML(answers, userData, result) {
       </div>
 </div>       
       </body>
-    </html>`
-}
-
-
+    </html>
